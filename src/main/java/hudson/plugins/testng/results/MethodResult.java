@@ -108,6 +108,10 @@ public class MethodResult extends BaseResult {
         return parentTestName;
     }
 
+    public String getTestInstanceName() {
+        return testInstanceName;
+    }
+    
     /**
      * @return name of the suite this method is part of
      */

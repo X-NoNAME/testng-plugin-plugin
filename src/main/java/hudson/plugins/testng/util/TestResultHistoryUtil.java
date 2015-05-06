@@ -104,7 +104,11 @@ public class TestResultHistoryUtil {
                htmlStr.append("<a href=\"").append(methodResult.getUpUrl());
                htmlStr.append("\">");
                htmlStr.append(((ClassResult)methodResult.getParent()).getCanonicalName());
-               htmlStr.append(".").append(methodResult.getName()).append("</a>");
+               htmlStr.append(".").append(methodResult.getName());
+               if(methodResult.getParameters()!=null && !methodResult.getParameters().isEmpty()){
+                    htmlStr.append(":").append(methodResult.getParameters());
+               }
+               htmlStr.append("</a>");
             } else {
                htmlStr.append(methodResult.getName());
             }

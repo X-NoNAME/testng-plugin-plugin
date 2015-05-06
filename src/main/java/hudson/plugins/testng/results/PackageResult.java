@@ -146,12 +146,15 @@ public class PackageResult extends BaseResult {
             sb.append("<tr><td align=\"left\">");
             sb.append("<a href=\"").append(mr.getUpUrl()).append("\">");
             sb.append(mr.getParent().getName()).append(".").append(mr.getName());
+            if(mr.getParameters()!=null && !mr.getParameters().isEmpty()){
+                sb.append(":").append(mr.getParameters());
+            }
             sb.append("</a>");
-            sb.append("</td><td align=\"center\">");
+            sb.append("</td><td align=\"center\" style=\"width:10em\">");
             sb.append(FormatUtil.formatTime(mr.getDuration()));
-            sb.append("</td><td align=\"center\">");
+            sb.append("</td><td align=\"center\" style=\"width:20em\">");
             sb.append(mr.getStartedAt());
-            sb.append("</td><td align=\"center\"><span class=\"").append(mr.getCssClass()).append("\">");
+            sb.append("</td><td align=\"center\" style=\"width:10em\"><span class=\"").append(mr.getCssClass()).append("\">");
             sb.append(mr.getStatus());
             sb.append("</span></td></tr>");
         }

@@ -39,7 +39,11 @@ if (my.result.failCount != 0) {
                         }
                         text(" ")
                         a(href:"${failedTest.upUrl}") {
-                            text("${failedTest.parent.canonicalName}.${failedTest.test-instance-name}")
+                            if(failedTest.parameters!=null){
+                                text("${failedTest.parent.canonicalName}.${failedTest.name}:${failedTest.parameters}")
+                            }else {
+                                text("${failedTest.parent.canonicalName}.${failedTest.name}")
+                            }
                         }
                         div(id:"${failedTest.id}", style: "display:none", class: "hidden") {
                             text("Loading...")

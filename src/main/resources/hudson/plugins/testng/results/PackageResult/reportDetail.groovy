@@ -115,13 +115,13 @@ if (my.sortedTestMethodsByStartTime) {
                 th(class:"pane-header", title:"Method") {
                     text("Method")
                 }
-                th(class:"pane-header", style:"width:5em", title:"Duration") {
+                th(class:"pane-header", style:"width:10em", title:"Duration") {
                     text("Duration")
                 }
-                th(class:"pane-header", style:"width:5em", title:"Start Time") {
+                th(class:"pane-header", style:"width:20em", title:"Start Time") {
                     text("Start Time")
                 }
-                th(class:"pane-header", style:"width:5em", title:"Status") {
+                th(class:"pane-header", style:"width:10em", title:"Status") {
                     text("Status")
                 }
             }
